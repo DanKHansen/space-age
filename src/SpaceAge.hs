@@ -1,14 +1,6 @@
 module SpaceAge (Planet (..), ageOn) where
 
-data Planet
-  = Mercury
-  | Venus
-  | Earth
-  | Mars
-  | Jupiter
-  | Saturn
-  | Uranus
-  | Neptune
+data Planet = Mercury | Venus | Earth | Mars | Jupiter | Saturn | Uranus | Neptune
 
 op :: Planet -> Float
 op planet = case planet of
