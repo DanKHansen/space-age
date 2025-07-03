@@ -1,11 +1,14 @@
 {
     "editor.formatOnSave": true,
-    "haskell.formattingProvider": "ormolu",
     "haskell.serverEnvironment": {},
     "haskell.toolchain": {
+
         "haskell": {
             "formattingProvider": "ormolu"
         }
     },
-    "haskell.checkProject": false
+    "haskell.checkProject": false,
+    "haskell.manageHLS": "GHCup",
+    "haskell.plugin.fourmolu.config.external": true,
+    "haskell.plugin.ormolu.config.external": true
 }
