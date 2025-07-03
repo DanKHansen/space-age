@@ -10,13 +10,16 @@ data Planet
   | Uranus
   | Neptune
 
+op :: Planet -> Float
+op planet = case planet of
+  Mercury -> 0.2408467
+  Venus -> 0.61519726
+  Earth -> 1.0
+  Mars -> 1.8808158
+  Jupiter -> 11.862615
+  Saturn -> 29.447498
+  Uranus -> 84.016846
+  Neptune -> 164.79132
+
 ageOn :: Planet -> Float -> Float
-ageOn planet seconds = case planet of
-  Mercury -> ageOn Earth seconds / (7600543.82 / 31557600)
-  Venus -> ageOn Earth seconds / (19414149.05 / 31557600)
-  Earth -> seconds / 31557600
-  Mars -> ageOn Earth seconds / (59354032.69 / 31557600)
-  Jupiter -> ageOn Earth seconds / (374355659.12 / 31557600)
-  Saturn -> ageOn Earth seconds / (929292362.88 / 31557600)
-  Uranus -> ageOn Earth seconds / (2651370019.33 / 31557600)
-  Neptune -> ageOn Earth seconds / (5200418560.03 / 31557600)
+ageOn planet seconds = seconds / (31557600 * op planet)

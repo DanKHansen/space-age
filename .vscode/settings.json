@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "haskell.formattingProvider": "ormolu",
+    "haskell.serverEnvironment": {},
+    "haskell.toolchain": {
+        "haskell": {
+            "formattingProvider": "ormolu"
+        }
+    },
+    "haskell.checkProject": false
+}
